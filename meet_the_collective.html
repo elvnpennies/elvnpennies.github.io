@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artists - elvn pennies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="banner">
+        <div class="banner-content">
+            <marquee scrollamount="3">welcome to elvn pennies - a collective of artists and creatives</marquee>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2 id="animated-title">elvn<br>pennies</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">home</a>
+            <a href="artists.html" class="nav-item active">artists</a>
+            <a href="the-movement.html" class="nav-item">the movement</a>
+        </nav>
+    </div>
+    <main class="main-content">
+        <div class="artists-grid">
+            {{ARTISTS}}
+        </div>
+    </main>
+    <script src="js/title-animation.js"></script>
+</body>
+</html>

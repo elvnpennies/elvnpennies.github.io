@@ -1,0 +1,219 @@
+@import url('css/palette.css');
+
+/* Custom Fonts */
+@font-face {
+    font-family: 'Generale Station';
+    src: url('../fonts/GeneraleStationGX.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Big Shoulders';
+    src: url('../fonts/BigShouldersDisplayGX.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paradose';
+    src: url('../fonts/WsParadoseRegularDISPLAY.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner styles */
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-surface);
+    border-top: 2px solid var(--color-border);
+    z-index: 1000;
+    height: 24px;
+    font-family: 'Generale Station', monospace;
+    font-size: 12px;
+}
+
+.banner-content {
+    color: var(--color-text-secondary);
+    line-height: 24px;
+}
+
+.banner marquee {
+    color: inherit;
+}
+
+/* Base styles */
+body {
+    font-family: 'Big Shoulders', sans-serif;
+    font-variation-settings: 'wght' 650;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    padding-bottom: 24px; /* Banner height */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding-top: 3rem;
+}
+
+.content-panel {
+    text-align: center;
+    padding: 2rem;
+    background: var(--color-surface);
+    border: 2px solid var(--color-border);
+}
+
+.logo {
+    width: 100%;
+    background: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+    padding: 2rem 0;
+    margin: 0;
+    position: relative;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--color-background);
+}
+
+#animated-title {
+    font-family: 'Generale Station', monospace;
+    font-size: 4rem;
+    text-align: center;
+}
+
+#animated-title span {
+    display: inline-block;
+    transition: font-variation-settings 0.5s ease;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-item {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem;
+    background: var(--color-surface);
+    border: 2px outset var(--color-border);
+    box-shadow: 
+        inset -1px -1px 0 0 rgba(0,0,0,0.3),
+        inset 1px 1px 0 0 rgba(255,255,255,0.2);
+    transition: all 0.1s;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+    font-family: 'Generale Station', monospace;
+}
+
+.nav-item:hover {
+    color: var(--color-text-primary);
+    border-style: inset;
+    box-shadow: 
+        inset 1px 1px 0 0 rgba(0,0,0,0.3),
+        inset -1px -1px 0 0 rgba(255,255,255,0.2);
+    transform: translateY(1px);
+}
+
+.nav-item:active {
+    border-style: inset;
+    box-shadow: 
+        inset 2px 2px 0 0 rgba(0,0,0,0.3),
+        inset -1px -1px 0 0 rgba(255,255,255,0.2);
+    transform: translateY(2px);
+}
+
+/* Footer styles */
+footer {
+    background: var(--color-surface);
+    border-top: 2px solid var(--color-border);
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .nav-item {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+    }
+
+    #animated-title {
+        font-size: 1.8rem;
+    }
+}

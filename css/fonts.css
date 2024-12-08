@@ -1,0 +1,21 @@
+/* Custom Fonts */
+@font-face {
+    font-family: 'Generale Station';
+    src: url('../fonts/GeneraleStation.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Paradose';
+    src: url('../fonts/WsParadoseRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

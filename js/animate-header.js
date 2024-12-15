@@ -1,24 +1,28 @@
 function animateHeader() {
     const title = document.getElementById('animated-title');
+    const titleLink = title.querySelector('a');
     
     // Split text into individual characters
-    const text = title.textContent;
-    title.innerHTML = '';
+    const text = titleLink.textContent;
+    titleLink.innerHTML = '';
     [...text].forEach(char => {
         const span = document.createElement('span');
         span.textContent = char;
-        title.appendChild(span);
+        span.style.fontVariationSettings = `"wdth" 100`;
+        titleLink.appendChild(span);
     });
 
-    const allSpans = Array.from(title.querySelectorAll('span'));
-    let index = 0; // Start with the first character
-    let increasing = true; // Tracks the direction of the ping pong
+    const allSpans = Array.from(titleLink.querySelectorAll('span'));
+    let index = 0;
+    let increasing = true;
 
     function animateOneByOne() {
-        // Reset all spans to default width
-        allSpans.forEach(span => {
-            span.style.fontVariationSettings = `"wdth" 100`;
-        });
+        // Smoothly reset previous span
+        if (index > 0 && increasing) {
+            allSpans[index - 1].style.fontVariationSettings = `"wdth" 100`;
+        } else if (index < allSpans.length - 1 && !increasing) {
+            allSpans[index + 1].style.fontVariationSettings = `"wdth" 100`;
+        }
 
         // Animate the current span
         const currentSpan = allSpans[index];
@@ -28,20 +32,20 @@ function animateHeader() {
         if (increasing) {
             index++;
             if (index >= allSpans.length) {
-                index = allSpans.length - 1; // Stay at the last span
-                increasing = false; // Reverse direction
+                index = allSpans.length - 1;
+                increasing = false;
             }
         } else {
             index--;
             if (index < 0) {
-                index = 0; // Stay at the first span
-                increasing = true; // Reverse direction
+                index = 0;
+                increasing = true;
             }
         }
     }
 
     // Start the interval for one-by-one animation
-    setInterval(animateOneByOne, 2400); // Adjust interval time for animation speed
+    setInterval(animateOneByOne, 900); // Faster interval for smoother animation
 }
 
 // Start the animation when the page loads

@@ -19,7 +19,7 @@ function animateTitle() {
     }
     
     // Update every 200ms
-    setInterval(updateTitle, 200);
+    setInterval(updateTitle, 900);
 }
 
 // Start animation when page loads

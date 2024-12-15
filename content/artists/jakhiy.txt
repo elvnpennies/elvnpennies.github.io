@@ -1,0 +1,3 @@
+name: jakhiy
+description: alternative artist
+link: https://open.spotify.com/artist/4eT7qTctBYpUqdO1teBJA8

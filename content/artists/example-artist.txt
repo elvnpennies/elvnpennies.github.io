@@ -1,0 +1,3 @@
+name: Example Artist
+link: https://example.com/artist
+description: A talented artist working with digital media and experimental sound design.

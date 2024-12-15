@@ -1,0 +1,3 @@
+name: gie
+description: alternative artist
+link: https://open.spotify.com/artist/3HfHdNFAqRkH9tmKg9eKhn

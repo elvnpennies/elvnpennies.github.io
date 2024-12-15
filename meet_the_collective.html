@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>artists - elvn pennies</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Meet the Collective - elvnpennies</title>
+    <link rel="icon" href="assets/world.gif" type="image/gif">
+    <link rel="stylesheet" href="css/layout.css">
+    <script src="js/animate-header.js"></script>
+    <script src="js/tab-ping-pong.js"></script>
 </head>
-<body>
-    <div class="banner">
-        <div class="banner-content">
-            <marquee scrollamount="3">welcome to elvn pennies - a collective of artists and creatives</marquee>
+<body class="index">
+    <img src="assets/dollar.gif" alt="Dollar" class="bottom-left-corner">
+    <img src="assets/dollar.gif" alt="Dollar" class="bottom-right-corner">
+    
+    <header class="site-header">
+        <h1 id="animated-title" class="animated-title"><a href="index.html">elvnpennies</a></h1>
+    </header>
+
+    <nav class="nav-bar">
+        <img src="assets/skull.gif" alt="Skull">
+        <ul class="nav-links">
+            <li class="nav-item"><a href="meet_the_collective.html">Meet the Collective</a></li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="share_your_art.html">Share Your Art</a></li>
+        </ul>
+        <img src="assets/speaker.gif" alt="Speaker">
+    </nav>
+
+    <div class="main-content">
+        <h2>Meet the Collective</h2>
+        <div class="artist-grid">
+            <a href="#alec" class="artist-button">Alec Sodrmatic</a>
+            <a href="#ander" class="artist-button">Ander</a>
+            <a href="#gie" class="artist-button">Gie</a>
+            <a href="#jakhiy" class="artist-button">Jakhiy</a>
+            <a href="#japheth" class="artist-button">Japheth Hannon</a>
+            <a href="#knobodi" class="artist-button">Knobodi</a>
         </div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </div>
-    <div class="sidebar">
-        <div class="sidebar-header">
-            <h2 id="animated-title">elvn<br>pennies</h2>
+
+    <footer class="site-footer">
+        <div class="blinkie-container">
+            <img src="assets/blinkies/horses.gif" alt="Horses">
+            <img src="assets/blinkies/eyes.gif" alt="Eyes">
+            <img src="assets/ie_animated.gif" alt="IE">
+            <img src="assets/blinkies/truth_now.gif" alt="Truth Now">
+            <img src="assets/blinkies/geocities.gif" alt="Geocities">
+            <img src="assets/blinkies/star.gif" alt="Star">
         </div>
-        <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">home</a>
-            <a href="artists.html" class="nav-item active">artists</a>
-            <a href="the-movement.html" class="nav-item">the movement</a>
-        </nav>
-    </div>
-    <main class="main-content">
-        <div class="artists-grid">
-            {{ARTISTS}}
+        <div class="marquee-container">
+            <div class="marquee">✧ Welcome to elvnpennies ✧ Share your art with the collective ✧ Join us in creating something beautiful ✧ Art is forever ✧ Express yourself ✧</div>
         </div>
-    </main>
-    <script src="js/title-animation.js"></script>
+        <img src="assets/blinkies/piano.gif" alt="Piano">
+        <div class="copyright">&copy; elvnpennies</div>
+    </footer>
 </body>
 </html>

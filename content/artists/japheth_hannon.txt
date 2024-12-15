@@ -1,0 +1,3 @@
+name: Japheth Hannon
+description: Alternative artist
+link: https://www.youtube.com/@japhethhannon

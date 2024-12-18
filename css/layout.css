@@ -149,11 +149,19 @@ marquee {
     padding: 2px;
 }
 
+/* add spin animation */
+
 .logo-container img {
-    padding-top: 2%;
     width: 20%;
     height: auto;
     filter: brightness(0) invert(1);
+    animation: spin 48s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 1079px) {

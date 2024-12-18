@@ -278,17 +278,17 @@ marquee {
     }
 
     .artist-button {
-        padding-top: 60px; /* Increased padding for vertical growth */
-        padding-bottom: 60px; /* Increased padding for vertical growth */
+        padding-top: 32px; /* Increased padding for vertical growth */
+        padding-bottom: 32px; /* Increased padding for vertical growth */
     }
     
     .artist-button-main {
         padding-top: 10px; /* Increased padding for vertical growth */
-        padding-bottom: 60px; /* Increased padding for vertical growth */
+        padding-bottom: 30px; /* Increased padding for vertical growth */
     }
     
     .artist-button-description {
-        padding-bottom: 60px; /* Increased padding for vertical growth */
+        padding-bottom: 30px; /* Increased padding for vertical growth */
         font-size: 100%; /* Increased size for description */
     }
 }

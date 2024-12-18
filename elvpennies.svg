@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024">
+	<circle r="464" cx="512" cy="512" fill="none" stroke-width="18" stroke="black" />
+	<circle r="448" cx="512" cy="512" fill-opacity="1" fill="none" stroke="black" stroke-dasharray="48" stroke-linejoin="bevel" stroke-width="8" />
+	<circle r="400" cx="512" cy="512" fill="none" stroke-width="8" stroke="black" />
+	<circle r="384" cx="512" cy="512" fill-opacity="1" fill="none" stroke="black" stroke-dasharray="12" stroke-linejoin="bevel" stroke-width="8" />
+	<g>
+		<circle r="16" cx="512" cy="624" />
+		<circle r="16" cx="512" cy="416" />
+		<path d="M448 512a1 1 0 0 0 128 0l-16 0a1 1 0 0 1-96 0z" transform="translate(0 -40)" />
+		<path d="M448 512a1 1 0 0 0 128 0l-16 0a1 1 0 0 1-96 0z" transform="rotate(180 512 512) translate(0 -40)" />
+		<circle r="160" cx="512" cy="512" fill="none" stroke="black" stroke-width="12" opacity="1" />
+		<polyline points="302 704 512 256 722 704" fill="none" stroke="black" stroke-width="32" stroke-linejoin="bevel" stroke-linecap="square" />
+	</g>
+	<g transform="translate(-35 0)" stroke-width="3">
+		<line x1="744" y1="408" y2="432" x2="744" stroke="black" />
+		<line x1="744" y1="408" y2="408" x2="756" stroke="black" />
+		<line x1="744" y1="420" y2="420" x2="752" stroke="black" />
+		<line x1="744" y1="432" y2="432" x2="756" stroke="black" />
+		<line x1="764" y1="408" y2="408" x2="776" stroke="black" />
+		<line x1="764" y1="420" y2="408" x2="764" stroke="black" />
+		<line x1="764" y1="420" y2="420" x2="776" stroke="black" />
+		<line x1="776" y1="432" y2="420" x2="776" stroke="black" />
+		<line x1="764" y1="432" y2="432" x2="776" stroke="black" />
+		<line x1="784" y1="408" y2="408" x2="800" stroke="black" />
+		<line x1="792" y1="432" y2="408" x2="792" stroke="black" />
+		<circle r="2" cx="804" cy="420" />
+		<line x1="812" y1="408" y2="408" x2="824" stroke="black" />
+		<line x1="824" y1="424" y2="408" x2="824" stroke="black" />
+		<line x1="812" y1="424" y2="424" x2="824" stroke="black" />
+		<line x1="812" y1="432" y2="424" x2="812" stroke="black" />
+		<line x1="812" y1="432" y2="432" x2="824" stroke="black" />
+		<rect width="12" height="24" x="832" y="408" fill="none" stroke="black" />
+		<line x1="852" y1="408" y2="408" x2="864" stroke="black" />
+		<line x1="864" y1="424" y2="408" x2="864" stroke="black" />
+		<line x1="852" y1="424" y2="424" x2="864" stroke="black" />
+		<line x1="852" y1="432" y2="424" x2="852" stroke="black" />
+		<line x1="864" y1="432" y2="432" x2="852" stroke="black" />
+		<line x1="872" y1="424" y2="408" x2="872" stroke="black" />
+		<line x1="872" y1="424" y2="424" x2="884" stroke="black" />
+		<line x1="878" y1="420" y2="432" x2="878" stroke="black" />
+	</g>
+	<g>
+		<path d="m264 368-16 0-16 16 0 16 16-16 0 64-16 0 0 16 32 0 16 0 0-16-16 0" />
+		<path d="m208 368-16 0-16 16 0 16 16-16 0 64-16 0 0 16 32 0 16 0 0-16-16 0" />
+		<path d="M320 384a1 1 0 0 0 0 72l15.7-8a1 1 0 0 1-16.6-56.5 1 1 0 0 0 10.1 10.6q6.2-11.6-3-15.6z" />
+		<line x1="312" y1="368" y2="472" x2="312" stroke="black" stroke-width="6" stroke-linecap="square" />
+	</g>
+</svg>

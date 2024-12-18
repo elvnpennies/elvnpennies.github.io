@@ -1,3 +1,0 @@
-name: Knobodi
-description: Visual artist
-link: https://www.instagram.com/knobodi.404/

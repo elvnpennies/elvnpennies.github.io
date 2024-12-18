@@ -1,9 +1,17 @@
-/* pallete */
+/* ==========================================
+   Fonts and Imports
+   ========================================== */
 
-/* Custom Font */
 @font-face {
     font-family: 'Generale Station';
     src: url('../fonts/GeneraleStation.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Generale Station';
+    src: url('../fonts/GeneraleStation.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -11,10 +19,21 @@
     src: url('../fonts/Inter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    fallback: 'Times New Roman';
 }
 
-/*include typography */
 @import url("css/typography.css");
+
+/* ==========================================
+   Root Variables
+   ========================================== */
+
+@media (min-width: 900px) {
+    * {
+        font-stretch: expanded;
+    }
+}
+
 
 :root {
     /* Colors */
@@ -28,99 +47,56 @@
 
     /* Layout Variables */
     --nav-height: 60px;
-    --footer-height: 100px;
     --header-height: 80px;
-    --base-font-size: clamp(16px, 2vw, 20px);
-    --header-font-size: clamp(24px, 4vw, 48px);
+    --footer-height: 100px;
+    --base-font-size: 16px;
+    --header-font-size: 2.5rem;
+    --nav-font-size: 1.5rem;
 }
 
-/* Mobile */
-@media screen and (max-width: 300px) {
-    :root {
-        --base-font-size: clamp(20px, 4vmin, 26px);
-        --header-font-size: clamp(36px, 5vmin, 44px);
-        --nav-font-size: clamp(24px, 4.5vmin, 32px);
-    }
-}
+/* ==========================================
+   Reset and Base Styles
+   ========================================== */
 
-/* Reset default styles */
 * {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-}
-
-html, body {
-    height: 100vh;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
-    color: white;
 }
+
+
 
 body {
-    font-family: 'Inter', Arial, sans-serif;
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    cursor: url('../flap.gif'), pointer;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    color: white;
+    font-size: var(--base-font-size);
 }
 
-.background-stars {
-    display: none;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* Layout */
-.site-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-    position: relative;
-}
-
-.site-header {
-    text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--header-height);
-    background-color: var(--color-primary);
-    color: var(--color-highlight);
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.animated-title {
-    font-family: 'Generale Station', sans-serif;
-    font-size: var(--header-font-size);
-    margin: 0;
-    padding: 0;
-}
-
-.animated-title a {
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.animated-title span {
-    display: inline-block;
-    transition: font-variation-settings 0.6s ease-in-out;
-}
-
-.animated-title a:hover span {
-    color: var(--color-accent);
-}
+marquee {
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Courier New', monospace;
+    }
+/* ==========================================
+   Navigation
+   ========================================== */
 
 .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
     position: fixed;
     top: var(--header-height);
     left: 0;
@@ -128,251 +104,271 @@ body {
     height: var(--nav-height);
     background-color: var(--color-secondary);
     z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
 }
+
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-item {
-    margin: 0 15px;
+    list-style: none;
+    gap: 20px;
+    font-size: var(--nav-font-size);
 }
 
 .nav-item a {
     color: white;
     text-decoration: none;
-    font-size: var(--base-font-size);
+    cursor: url('../red.png'), pointer;
 }
 
 .nav-item a:hover {
     text-decoration: underline;
 }
 
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 0;
-    padding: 8rem;
-    position: relative;
-    background-color: black;
-    overflow: hidden;
-    font-size: 1.1rem;
-    letter-spacing: 0.01em;
-    line-height: 1.7;
-    max-width: 65ch;
-    margin: 0 auto;
-    text-align: justify;
-}
+/* ==========================================
+   Header and Logo
+   ========================================== */
 
-.main-content::before {
-    content: '';
-    position: absolute;
+.site-header {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/bgstar.gif');
-    background-repeat: repeat;
-    opacity: 0.3;
-    z-index: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 0;
 }
 
-.main-content > * {
-    position: relative;
-    z-index: 1;
+.logo-container {
+    width: 100%;
+    text-align: center;
+    padding: 2px;
 }
+
+.logo-container img {
+    padding-top: 2%;
+    width: 20%;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1079px) {
+    .logo-container img {
+        padding-top: 25%;
+        width: 70%;
+    }
+    
+    body {
+        font-size: calc(var(--base-font-size) * 1.25);
+    }
+    
+    .animated-title span {
+        padding-top: 30px;
+        font-size: calc(var(--header-font-size) * 2);
+    }
+    
+    .nav-links {
+        font-size: calc(var(--nav-font-size) * 1.25);
+    }
+}
+
+.animated-title {
+    font-family: 'Generale Station', sans-serif;
+    font-size: var(--header-font-size);
+    margin: 0;
+}
+
+.animated-title a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.animated-title span {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ==========================================
+   Main Content
+   ========================================== */
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    position: fixed;
+    top: calc(var(--header-height) + var(--nav-height));
+    left: 0;
+    right: 0;
+    background-color: #000000;
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
 
 .site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     text-align: center;
-    padding-bottom: 2px;
+    background-color: black;
+    color: white;
+}
+
+.marquee-container {
     width: 100%;
-}
-
-.site-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.3) 20%,
-        rgba(255, 255, 255, 0.5) 50%,
-        rgba(255, 255, 255, 0.3) 80%,
-        transparent 100%
-    );
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        opacity: 0.5;
-    }
-    to {
-        opacity: 1;
-    }
+    max-width: 800px;
 }
 
 .blinkie-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 2px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.blinkie {
-    image-rendering: pixelated;
-}
-
-img {
-    image-rendering: pixelated;
-    max-height: 40px;
-}
-
-.decoration-container {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0;
-    flex-wrap: wrap;
-}
-
-.decoration-container img {
-    image-rendering: pixelated;
-}
-
-.divider {
-    width: 100%;
-    height: 20px;
-    background-image: url('../assets/blinkies/cautiondivider.gif');
-    background-repeat: repeat-x;
-    background-size: auto 100%;
-    margin: 1rem 0;
-}
-
-.bottom-right-corner {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    z-index: 2000;
+@media (max-width: 1079px) {
+    
+    .blinkie-container {
+        margin-top: 20px;
+        scale : 2.0;
+    }
 }
 
 
-.bottom-left-corner {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    z-index: 2000;
-}
 
-.top-right-corner {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2000;
-}
+.bottom-right-corner { bottom: 0; right: 0; position: fixed; z-index: 2000;}
+.bottom-left-corner { bottom: 0; left: 0; position: fixed; z-index: 2000;}
+.top-right-corner { top: 0; right: 0; position: fixed; z-index: 2000;}
+.top-left-corner { top: 0; left: 0; position: fixed; z-index: 2000;}
 
 
-.top-left-corner {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 2000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Artist Grid */
+/* need the artist button to flex vertically */
+@media (max-width: 1080px) {
+
+    .share-content a {
+        font-size: 32px
+    }
+
+    .artist-button {
+        padding-top: 60px; /* Increased padding for vertical growth */
+        padding-bottom: 60px; /* Increased padding for vertical growth */
+    }
+    
+    .artist-button-main {
+        padding-top: 10px; /* Increased padding for vertical growth */
+        padding-bottom: 60px; /* Increased padding for vertical growth */
+    }
+    
+    .artist-button-description {
+        padding-bottom: 60px; /* Increased padding for vertical growth */
+        font-size: 100%; /* Increased size for description */
+    }
 }
 
-.artist-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    width: 100%;
-    max-width: 800px;
-    margin: 2rem auto;
-}
 
 .artist-button {
+    display: block;
+    padding: 6px;
+    margin: 10px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 1rem;
-    text-align: center;
     color: white;
     text-decoration: none;
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px);
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 .artist-button:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.marquee-container {
-    margin: 2px 0;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 2px 0;
+.artist-button-main::before,
+.artist-button-main::after {
+    content: "-";
+    padding: 5%;
 }
 
-.marquee {
-    white-space: nowrap;
-    display: inline-block;
-    animation: marquee 20s linear infinite;
+.artist-button-main {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.artist-button-description {
+    text-align: center;
+    font-size: 0.9em;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 12px;
-    letter-spacing: 1px;
 }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(100%);
+/* Share Content */
+.share-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+}
+
+.share-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.share-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1079px) {
+    .artist-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
     }
-    100% {
-        transform: translateX(-100%);
+    
+    .share-content {
+        padding: 10px;
+    }
+    
+    .share-content h2 {
+        font-size: calc(2em * 1.25);
+    }
+    
+    .share-content p {
+        font-size: calc(1em * 1.25);
     }
 }
 
-/* Ensure content stays within viewport */
-@media (max-height: 600px) {
-    :root {
-        --nav-height: 40px;
-        --footer-height: 80px;
-        --header-height: 60px;
-    }
-    
-    .nav-bar {
-        padding: 0.5rem;
-    }
-    
-    .site-footer {
-        padding: 0.5rem 0;
-    }
-}
 
 .copyright {
-    font-size: 8px;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    font-size: 7px;
+    text-align: center;
 }

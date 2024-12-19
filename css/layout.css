@@ -335,7 +335,7 @@ marquee {
     font-size: 1.2em;
     margin-bottom: 10px;
     font-weight: bold;
-text-transform: none !important;
+}
 
 .artist-button-description {
     text-align: center;

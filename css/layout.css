@@ -386,4 +386,5 @@ marquee {
 .copyright {
     font-size: 7px;
     text-align: center;
-}
+}.artist-button-main {
+    text-transform: none !important; /* Prevents capitalization or transformation */
